@@ -6,19 +6,23 @@ body {
 .content {
   text-align: center;
 }
- 
+
 .content:before {
-  content: '';
-  display: inline-block;
-  height: 100%; 
-  vertical-align: middle;
-    
-  /* For visualization 
-  background: #808080; width: 5px;
-  */
- }
- 
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+}
 .centered-content {
-  display: inline-block;
-  vertical-align: middle;
- }
+    display: inline-block;
+    vertical-align: middle;
+}
+@media all and (orientation: portrait) {
+    .content:before {
+        height: 25%; 
+    }
+}
+@media all and (orientation: landscape) {
+    .content:before {
+        height: 100%; 
+    }
+}
